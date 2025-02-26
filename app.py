@@ -11,6 +11,7 @@ from flask_jwt_extended import (
     unset_jwt_cookies,
 )
 
+
 from models import Admin, Category, RegularUser, Todo, TodoCategory, db, User
 
 app = Flask(__name__)
@@ -20,7 +21,7 @@ app.config['SECRET_KEY'] = 'MySecretKey'
 app.config['JWT_ACCESS_COOKIE_NAME'] = 'access_token'
 app.config['JWT_REFRESH_COOKIE_NAME'] = 'refresh_token'
 app.config["JWT_TOKEN_LOCATION"] = ["cookies"]
-app.config["JWT_COOKIE_SECURE"] = True
+app.config["JWT_COOKIE_SECURE"] = False
 app.config["JWT_SECRET_KEY"] = "super-secret"
 app.config["JWT_COOKIE_CSRF_PROTECT"] = False
 
