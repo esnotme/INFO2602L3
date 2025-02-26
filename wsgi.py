@@ -4,6 +4,8 @@ from models import db, Todo, Admin, RegularUser, User
 from sqlalchemy.exc import IntegrityError
 from app import app
 
+
+db = SQLAlchemy()
 db.init_app(app)
 
 
